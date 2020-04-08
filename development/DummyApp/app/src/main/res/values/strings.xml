@@ -1,0 +1,15 @@
+<resources>
+    <!-- Main Activity -->
+    <string name="app_name">Dummy App</string>
+
+    <!-- Fragment 1 -->
+    <string name="btn_forward">Forward</string>
+    <string name="btn_counter">Click me!</string>
+    <string name="editText_freetext">Input some text here.</string>
+
+    <!-- Fragment 2 -->
+    <string name="btn_back">Back</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
