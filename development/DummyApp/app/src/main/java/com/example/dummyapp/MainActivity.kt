@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.Serializable
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,13 +16,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btn_counter.setOnClickListener {
-            increaseCount()
+            incrementCounter()
         }
 
         btn_forward.setOnClickListener {
-            // TODO: Package the data
-            //  And send it to the other activity.
-
             sendMessage()
         }
     }
@@ -31,12 +29,12 @@ class MainActivity : AppCompatActivity() {
         val message = DummyData(count, freeText)
 
         val intent = Intent(this, MainActivity::class.java).apply {
-            putExtra("data", message)
+            putExtra("DUMMY_DATA", message)
         }
         this.startActivity(intent)
     }
 
-    private fun increaseCount() {
+    private fun incrementCounter() {
         count++
         val counterText = this.findViewById<TextView>(R.id.text_counter)
         counterText.text = count.toString()
