@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val freeText = this.findViewById<TextView>(R.id.editText).text.toString()
         val message = DummyData(count, freeText)
 
-        val intent = Intent(this, MainActivity::class.java).apply {
+        val intent = Intent(this, SecondActivity::class.java).apply {
             putExtra("DUMMY_DATA", message)
         }
         this.startActivity(intent)
